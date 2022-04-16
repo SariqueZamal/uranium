@@ -69,7 +69,7 @@ const book= async function (req, res) {
   {$set: {isHardCover : true}});
 
   let update = await NewAuthorModel.find({rating: {$gt: 3.5}}).select({_id: 1})
-  // let arr =[];
+
   for (let i=0; i<update.length;i++) {
 
    updatedPrice= await NewBookModel.updateMany({author: update[i]._id}, {$inc: {price: 10}})
