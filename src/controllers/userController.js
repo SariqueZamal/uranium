@@ -79,10 +79,19 @@ const deletedUser = async function (req, res) {
   res.send({ status: updatedUser, data: updatedUser });
 };
 
+// const authorizedUser = async function (req, res) {
 
+// let user = await userModel.findById(req.params.userId)
+//     if(!user) return res.send({status: false, msg: 'No such user exists'})
+
+//   let userData = req.body;
+//   let updatedUser = await userModel.findOneAndUpdate({ _id: userId }, userData);
+//   res.send({ status: user, data: updatedUser });
+// };
 
 module.exports.createUser = createUser;
 module.exports.getUserData = getUserData;
 module.exports.updateUser = updateUser;
 module.exports.loginUser = loginUser;
 module.exports.deletedUser = deletedUser;
+// module.exports.authorizedUser = authorizedUser;
